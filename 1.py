@@ -5,5 +5,10 @@ class Solution:
         :type target: int
         :rtype: List[int]
         """
-        for num in nums:
-        
+        dic = {}
+        for i, num in enumerate(nums):
+            if num in dic:
+                return [dic[num], i]
+            else:
+                dic[target - num] = i
+
