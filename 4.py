@@ -9,9 +9,11 @@ class Solution:
         n = len(nums1)
         m = len(nums2)
         mid = int((n + m) / 2)
-        tmp = [0]
+        tmp = []
         i = 0
         j = 0
+        print(i, j)
+        tmp.append(0)
         while  i < n and j < m:
             if nums1[i] < nums2[j]:
                 tmp.append(nums1[i])
@@ -23,7 +25,7 @@ class Solution:
             tmp.append(nums1[i])
             i += 1
         while j < m:
-            tmp.append(nums2[i])
+            tmp.append(nums2[j])
             j += 1
         if (n + m) % 2:
             return tmp[mid + 1]
